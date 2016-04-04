@@ -1,5 +1,8 @@
 package com.scrumtrek.simplestore;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -84,6 +87,9 @@ public class Customer {
     }
 
     public String StatementJson() {
-        return "";
+        CustomerStatDto dto = Statement();
+        GsonBuilder builder = new GsonBuilder();
+        Gson gson = builder.setPrettyPrinting().create();
+        return gson.toJson(dto);
     }
 }

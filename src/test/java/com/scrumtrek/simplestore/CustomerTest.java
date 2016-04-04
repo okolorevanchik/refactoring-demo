@@ -7,6 +7,30 @@ import org.junit.Test;
 public class CustomerTest {
 
     @Test
+    public void testStatementFiveItemsRegularJson() throws Exception {
+        // Create movies
+        Movie movStarWars = new Movie("Star Wars", PriceCodes.Regular);
+
+        // Create customers
+        Customer custDonaldDuck = new Customer("Donald Duck");
+
+        // Create rentals
+        Rental rental2 = new Rental().addOrder(new Order(movStarWars, 5));
+
+        // Assign rentals to customers
+        custDonaldDuck.addRental(rental2);
+
+        // Generate invoice
+        Assert.assertEquals("{\n" +
+                "  \"totalAmount\": 6.5,\n" +
+                "  \"frequentRenterPoints\": 1,\n" +
+                "  \"movieMap\": {\n" +
+                "    \"Star Wars\": 6.5\n" +
+                "  }\n" +
+                "}", custDonaldDuck.StatementJson());
+    }
+
+    @Test
     public void testStatementFiveItemsRegular() throws Exception {
         // Create movies
         Movie movStarWars = new Movie("Star Wars", PriceCodes.Regular);
