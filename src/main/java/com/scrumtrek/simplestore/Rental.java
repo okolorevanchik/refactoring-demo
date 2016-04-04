@@ -1,20 +1,24 @@
 package com.scrumtrek.simplestore;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class Rental {
-	private Movie m_Movie;
-	private int m_DaysRented;
+    Set<Order> orderSet = new HashSet<>();
 
-	public Rental(Movie movie, int daysRented) {
-		m_Movie = movie;
-		m_DaysRented = daysRented;
-	}
 
-	public int getDaysRented() {
-		return m_DaysRented;
-	}
 
-	public Movie getMovie() {
-		return m_Movie;
-	}
+    public Rental addOrder(Order o) {
+        orderSet.add(o);
+        return this;
+    }
+
+    public Set<Order> getOrderSet() {
+        return orderSet;
+    }
+
+    public void setOrderSet(Set<Order> orderSet) {
+        this.orderSet = orderSet;
+    }
 }
 
