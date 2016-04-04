@@ -7,17 +7,13 @@ import java.util.Map;
  * Created by anton on 04.04.16.
  */
 public class CustomerStatDto {
-    double totalAmount = 0;
-    int frequentRenterPoints = 0;
-    Map<String, Double> movieMap = new HashMap<>();
+    private double totalAmount;
+    private int frequentRenterPoints;
+    private Map<String, Double> movieMap = new HashMap<>();
 
 
     public Map<String, Double> getMovieMap() {
         return movieMap;
-    }
-
-    public void setMovieMap(Map<String, Double> movieMap) {
-        this.movieMap = movieMap;
     }
 
     public double getTotalAmount() {

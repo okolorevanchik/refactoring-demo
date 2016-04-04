@@ -27,7 +27,7 @@ public class CustomerTest {
                 "  \"movieMap\": {\n" +
                 "    \"Star Wars\": 6.5\n" +
                 "  }\n" +
-                "}", custDonaldDuck.StatementJson());
+                "}", custDonaldDuck.statementJson());
     }
 
     @Test
@@ -45,7 +45,7 @@ public class CustomerTest {
         custDonaldDuck.addRental(rental2);
 
         // Generate invoice
-        String statementDonald = custDonaldDuck.StatementString();
+        String statementDonald = custDonaldDuck.statementString();
 
         // Print the statement
         Assert.assertEquals(statementDonald, "Rental record for Donald Duck\n" +
@@ -69,7 +69,7 @@ public class CustomerTest {
         custMickeyMouse.addRental(rental1);
 
         // Generate invoice
-        String statementMickey = custMickeyMouse.StatementString();
+        String statementMickey = custMickeyMouse.statementString();
 
         // Print the statement
         Assert.assertEquals(statementMickey, "Rental record for Mickey Mouse\n" +
@@ -93,7 +93,7 @@ public class CustomerTest {
         custMinnieMouse.addRental(rental3);
 
         // Generate invoice
-        String statementMinnie = custMinnieMouse.StatementString();
+        String statementMinnie = custMinnieMouse.statementString();
 
         // Print the statement
         Assert.assertEquals(statementMinnie, "Rental record for Minnie Mouse\n" +
@@ -117,7 +117,7 @@ public class CustomerTest {
         custMickeyMouse.addRental(rental1);
 
         // Generate invoice
-        String statementMickey = custMickeyMouse.StatementString();
+        String statementMickey = custMickeyMouse.statementString();
 
         // Print the statement
         Assert.assertEquals(statementMickey, "Rental record for Mickey Mouse\n" +
@@ -141,7 +141,7 @@ public class CustomerTest {
         custDonaldDuck.addRental(rental2);
 
         // Generate invoice
-        String statementDonald = custDonaldDuck.StatementString();
+        String statementDonald = custDonaldDuck.statementString();
 
         // Print the statement
         Assert.assertEquals(statementDonald, "Rental record for Donald Duck\n" +
@@ -165,7 +165,7 @@ public class CustomerTest {
         custMinnieMouse.addRental(rental3);
 
         // Generate invoice
-        String statementMinnie = custMinnieMouse.StatementString();
+        String statementMinnie = custMinnieMouse.statementString();
 
         // Print the statement
         Assert.assertEquals(statementMinnie, "Rental record for Minnie Mouse\n" +

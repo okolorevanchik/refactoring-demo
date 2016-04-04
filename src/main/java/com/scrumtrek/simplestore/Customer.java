@@ -8,30 +8,30 @@ import java.util.List;
 import java.util.Map;
 
 public class Customer {
-	private String m_Name;
-	private List<Rental> m_Rentals = new ArrayList<Rental>();
+	private String name;
+	private List<Rental> rentals = new ArrayList<Rental>();
 
 	public Customer(String name) {
-		m_Name = name;
+		this.name = name;
 	}
 
 	public String getName() {
-		return m_Name;
+		return name;
 	}
 
 
 	public void addRental(Rental arg){
-		m_Rentals.add(arg);
+		rentals.add(arg);
 	}
 
-	private CustomerStatDto Statement()
+	private CustomerStatDto statement()
 	{
 		double totalAmount = 0;
 		int frequentRenterPoints = 0;
 
         CustomerStatDto dto = new CustomerStatDto();
 
-		for(Rental each: m_Rentals) {
+		for(Rental each: rentals) {
             for (Order order : each.getOrderSet()) {
                 double thisAmount = 0;
 
@@ -75,9 +75,9 @@ public class Customer {
 		return dto;
 	}
 
-    public String StatementString() {
-        CustomerStatDto dto = Statement();
-        String result = "Rental record for " + m_Name + "\n";
+    public String statementString() {
+        CustomerStatDto dto = statement();
+        String result = "Rental record for " + name + "\n";
         for (Map.Entry<String, Double> movie : dto.getMovieMap().entrySet()) {
             result += "\t" + movie.getKey() + "\t" + movie.getValue() + "\n";
         }
@@ -86,8 +86,8 @@ public class Customer {
         return result;
     }
 
-    public String StatementJson() {
-        CustomerStatDto dto = Statement();
+    public String statementJson() {
+        CustomerStatDto dto = statement();
         GsonBuilder builder = new GsonBuilder();
         Gson gson = builder.setPrettyPrinting().create();
         return gson.toJson(dto);
