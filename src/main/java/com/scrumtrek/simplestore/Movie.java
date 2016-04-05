@@ -2,22 +2,32 @@ package com.scrumtrek.simplestore;
 
 import com.scrumtrek.simplestore.pricecodes.PriceCodes;
 
+/**
+ * Class information on film
+ */
 public class Movie {
 
-	private String title;
-	private PriceCodes priceCode;
+    /**
+     * Title movie
+     */
+    private String title;
 
-	public Movie(String title, PriceCodes priceCode) {
-		this.title = title;
-		this.priceCode = priceCode;
-	}
+    /**
+     * Price code movie
+     */
+    private PriceCodes priceCode;
 
-	public PriceCodes getPriceCode()	{
-		return priceCode;
-	}
+    public Movie(String title, PriceCodes priceCode) {
+        this.title = title;
+        this.priceCode = priceCode;
+    }
 
-	public String getTitle() {
-		return title;
-	}
+    public PriceCodes getPriceCode() {
+        return priceCode;
+    }
+
+    public String getTitle() {
+        return title;
+    }
 }
 

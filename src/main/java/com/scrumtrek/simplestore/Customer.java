@@ -3,6 +3,9 @@ package com.scrumtrek.simplestore;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Class ordering information
+ */
 public class Customer {
 
     private String name;
@@ -24,6 +27,10 @@ public class Customer {
         rentals.add(arg);
     }
 
+    /**
+     * Calculate total amount
+     * @return total amount
+     */
     public double getTotalAmount() {
         double totalAmount = 0;
 
@@ -37,6 +44,13 @@ public class Customer {
         return totalAmount;
     }
 
+    /**
+     * Calculating the value of the film depending
+     * on the number of days of rental.
+     * @param movie movie
+     * @param rental rental
+     * @return amount movie
+     */
     public double getMovieRentedDaysAmount(Movie movie, Rental rental) {
         double result = movie.getPriceCode().getStartPrice();
         int lowCostDaysCount = movie.getPriceCode().getLowCostDaysCount();

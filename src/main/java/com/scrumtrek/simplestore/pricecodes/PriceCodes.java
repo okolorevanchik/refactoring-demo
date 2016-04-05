@@ -1,29 +1,43 @@
 package com.scrumtrek.simplestore.pricecodes;
 
+/**
+ * Price codes for movies categories
+ */
 public enum PriceCodes {
-	REGULAR(2.0, 1.5, 2),
-	NEW_RELEASE(0.0, 3.0, 0),
-	CHILDRENS(1.5, 1.5, 3);
+    REGULAR(2.0, 1.5, 2),
+    NEW_RELEASE(0.0, 3.0, 0),
+    CHILDRENS(1.5, 1.5, 3);
 
-	private double startPrice;
-	private double amountPrice;
-	private int lowCostDaysCount;
+    /**
+     * Standard cost of film
+     */
+    private double startPrice;
 
-	PriceCodes(double startPrice, double amountPrice, int lowCostDaysCount) {
-		this.startPrice = startPrice;
-		this.amountPrice = amountPrice;
-		this.lowCostDaysCount = lowCostDaysCount;
-	}
+    /**
+     * The cost of the film depending on the number of rolled days
+     */
+    private double amountPrice;
 
-	public double getStartPrice() {
-		return startPrice;
-	}
+    /**
+     * Number of rental days
+     */
+    private int lowCostDaysCount;
 
-	public double getAmountPrice() {
-		return amountPrice;
-	}
+    PriceCodes(double startPrice, double amountPrice, int lowCostDaysCount) {
+        this.startPrice = startPrice;
+        this.amountPrice = amountPrice;
+        this.lowCostDaysCount = lowCostDaysCount;
+    }
 
-	public int getLowCostDaysCount() {
-		return lowCostDaysCount;
-	}
+    public double getStartPrice() {
+        return startPrice;
+    }
+
+    public double getAmountPrice() {
+        return amountPrice;
+    }
+
+    public int getLowCostDaysCount() {
+        return lowCostDaysCount;
+    }
 }
