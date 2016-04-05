@@ -1,8 +1,8 @@
 package com.scrumtrek.simplestore.reports;
 
-import com.scrumtrek.simplestore.OrderInfoDTO;
+import com.scrumtrek.simplestore.Customer;
 
 public interface ReportGenerator {
 
-    String generateReport(OrderInfoDTO orderInfoDTO);
+    String generateReport(Customer orderInfoDTO);
 }
