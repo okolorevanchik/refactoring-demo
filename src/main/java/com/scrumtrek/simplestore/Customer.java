@@ -1,7 +1,5 @@
 package com.scrumtrek.simplestore;
 
-import com.scrumtrek.simplestore.reports.ReportGenerator;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,7 +8,7 @@ public class Customer {
     private String name;
     private List<Rental> rentals = new ArrayList<>();
 
-    public Customer(String name, ReportGenerator reportGenerator) {
+    public Customer(String name) {
         this.name = name;
     }
 
@@ -31,7 +29,7 @@ public class Customer {
 
         for (Rental each : rentals) {
             for (Movie movie : each.getMovies()) {
-                double thisAmount = getMovieRentedDaysAmount(movie, each.getDaysRented());
+                double thisAmount = getMovieRentedDaysAmount(movie, each);
                 totalAmount += thisAmount;
             }
         }
@@ -39,10 +37,10 @@ public class Customer {
         return totalAmount;
     }
 
-    public double getMovieRentedDaysAmount(Movie movie, int daysRented) {
+    public double getMovieRentedDaysAmount(Movie movie, Rental rental) {
         double result = movie.getPriceCode().getStartPrice();
         int lowCostDaysCount = movie.getPriceCode().getLowCostDaysCount();
-        if (daysRented > lowCostDaysCount) {
+        if (rental.getDaysRented() > lowCostDaysCount) {
             result += movie.getPriceCode().getAmountPrice();
         }
 

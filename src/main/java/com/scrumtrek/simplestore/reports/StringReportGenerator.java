@@ -14,7 +14,7 @@ public class StringReportGenerator implements ReportGenerator {
         for (Rental rental: customer.getRentals()) {
             for (Movie movie: rental.getMovies()) {
                 result.append("\t").append(movie.getTitle()).append("\t");
-                result.append(customer.getMovieRentedDaysAmount(movie, rental.getDaysRented())).append("\n");
+                result.append(customer.getMovieRentedDaysAmount(movie, rental)).append("\n");
             }
         }
         result.append("Amount owed is ").append(customer.getTotalAmount());

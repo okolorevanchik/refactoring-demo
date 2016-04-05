@@ -17,7 +17,7 @@ public class CustomerTest {
         Movie movStarWars = new Movie("Star Wars", PriceCodes.REGULAR);
 
         // Create customers
-        Customer custDonaldDuck = new Customer("Donald Duck", new JsonReportGenerator());
+        Customer custDonaldDuck = new Customer("Donald Duck");
 
         // Create rentals
         Rental rental2 = new Rental(5);
@@ -53,7 +53,7 @@ public class CustomerTest {
         Movie movStarWars = new Movie("Star Wars", PriceCodes.REGULAR);
 
         // Create customers
-        Customer custDonaldDuck = new Customer("Donald Duck", new StringReportGenerator());
+        Customer custDonaldDuck = new Customer("Donald Duck");
 
         // Create rentals
         Rental rental2 = new Rental(5);
@@ -74,7 +74,7 @@ public class CustomerTest {
         // Create movies
         Movie movCinderella = new Movie("Cinderella", PriceCodes.CHILDRENS);
         // Create customers
-        Customer custMickeyMouse = new Customer("Mickey Mouse", new StringReportGenerator());
+        Customer custMickeyMouse = new Customer("Mickey Mouse");
 
         // Create rentals
         Rental rental1 = new Rental(5);
@@ -96,7 +96,7 @@ public class CustomerTest {
         Movie movGladiator = new Movie("Gladiator", PriceCodes.NEW_RELEASE);
 
         // Create customers
-        Customer custMinnieMouse = new Customer("Minnie Mouse", new StringReportGenerator());
+        Customer custMinnieMouse = new Customer("Minnie Mouse");
 
         // Create rentals
         Rental rental3 = new Rental(5);
@@ -118,7 +118,7 @@ public class CustomerTest {
         Movie movCinderella = new Movie("Cinderella", PriceCodes.CHILDRENS);
 
         // Create customers
-        Customer custMickeyMouse = new Customer("Mickey Mouse", new StringReportGenerator());
+        Customer custMickeyMouse = new Customer("Mickey Mouse");
 
         // Create rentals
         Rental rental1 = new Rental(0);
@@ -140,7 +140,7 @@ public class CustomerTest {
         Movie movStarWars = new Movie("Star Wars", PriceCodes.REGULAR);
 
         // Create customers
-        Customer custDonaldDuck = new Customer("Donald Duck", new StringReportGenerator());
+        Customer custDonaldDuck = new Customer("Donald Duck");
 
         // Create rentals
         Rental rental2 = new Rental(0);
@@ -162,7 +162,7 @@ public class CustomerTest {
         Movie movGladiator = new Movie("Gladiator", PriceCodes.NEW_RELEASE);
 
         // Create customers
-        Customer custMinnieMouse = new Customer("Minnie Mouse", new StringReportGenerator());
+        Customer custMinnieMouse = new Customer("Minnie Mouse");
 
         // Create rentals
         Rental rental3 = new Rental(0);
